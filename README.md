@@ -2,9 +2,10 @@
 #网络请求
 ##这是一个封装好的网络请求
   里面有两种调用方法（都是用block调用的，但是有一个直接调用，另一个稍复杂一些，但是各有好处）：
-  ##首先看用法：
+  
+##首先看用法：
   我们可以将NetWorkTool放进工程当中，然后可以模仿DiaoyongOne和DiaoyongTwo中写好的方法写个类，然后在控制器中调用。
-  ###接下来看DiaoyongOne中的写法：
+###接下来看DiaoyongOne中的写法：
   首先确定是post 还是get方法，然后再确定是否有参数，最后往里写方法（可以直接拖DiaoyongOne中的方法），在.h文件写上如下代码的一个：
 ```
  .h文件中：
@@ -39,7 +40,7 @@
 对应上方.h文件中，block增加了东西，那么我们可以返回的也就是那么多：可以写为
 success(dict,liyunxing,YES);
 ```
-  ###接下来看DiaoyongTwo中的写法
+###接下来看DiaoyongTwo中的写法
 在这个中调用方法基本和上方一样，只不过我们是通过-(id)initWithResultBlock:(void(^)(id result))success;和-(void)exec;两个方法同时操作进行调用
 ```
 我们可以看代码：
